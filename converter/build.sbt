@@ -3,9 +3,18 @@ scalaVersion := "2.12.6"
 
 libraryDependencies ++= {
   val kafkaV = "1.0.1"
+  val akka = "com.typesafe.akka"
+  val akkaV = "2.5.16"
   Seq(
     "com.typesafe.akka" %% "akka-stream" % "2.5.16",
-    "com.google.cloud" % "google-cloud-translate" % "1.26.0"
+    "com.google.cloud" % "google-cloud-translate" % "1.26.0",
+    akka %% "akka-http" % "10.0.10",
+    akka %% "akka-stream" % akkaV,
+    akka % "akka-stream-kafka_2.12" % "0.16",
+    akka %% "akka-http-spray-json" % "10.0.10",
+    akka %% "akka-slf4j" % akkaV,
+    "ch.qos.logback" % "logback-classic" % "1.1.7",
+    "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0"
   )
 }
 
